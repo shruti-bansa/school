@@ -1,0 +1,55 @@
+<div id="carouselExampleCaptions" class="carousel slide carousel-fade " >
+  <div class="carousel-indicators">
+    {{#each slides}}
+    <button
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide-to="{{@index}}"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+      
+      
+    ></button>
+    {{/each}}
+  </div>
+  <div
+    id="carouselExampleSlidesOnly"
+    class="carousel slide"
+    data-ride="carousel"
+  >
+    <div class="carousel-inner">
+      {{#each slides}}
+        <div class="carousel-item {{this.class}}">
+          <img src="{{this.imageUrl}}" class="d-block w-100 slider-image" 
+          height="500px" 
+           
+          />
+          <div class="carousel-caption d-none d-md-block">
+             <h5 style="color:#fff;">{{this.title}}</h5>
+            <p style="color:#fff;">{{this.subTitle}}</p>
+          </div>
+        </div>
+      {{/each}}
+
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleCaptions"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleCaptions"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

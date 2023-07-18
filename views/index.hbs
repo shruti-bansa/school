@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{!-- bootstrap --}}
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>dynamic school website</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    {{>navbar details=details}}
+
+    {{> slider slides=slides }}
+
+
+    {{!-- banner1 section --}}
+
+    <section class="banner1_section py-5 background2">
+      <div class="container text-center text-light ">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>"Start new learnig from Here"</h1>
+            <p>Programming is lots of fun and extraordinarily useful. It allows you to be creative while opening up a wide range of new career opportunities. You'll need to choose a coding language to study before taking advantage of all the available online resources. </p>
+          <button class=" btn-outline-light">Start learning</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+
+    {{!-- services section --}}
+ <section id="service_section" class="py-3  ">
+      <div class="container">
+        <h1 class="text-center text-light background1">Awesome Features</h1>
+
+        <div class="row mt-3">
+        {{!-- first service column --}}
+        {{#each services}}
+          <div class="col-md-4 ">
+
+            <div class="card">
+
+              <div class="card-body">
+                <div class="container text-center py-3">
+                 <i class="{{this.icon}} service_icon" ></i>
+                </div>
+              
+                <h3 class="card-title">{{this.title}}</h3>
+                <p>{{this.description}}</p>
+                  <a href="{{this.link}}" class="m-1"> {{this.linkText}} </a>
+                  
+              
+              </div>
+            </div>
+
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+
+    {{!-- banner1_section --}}
+
+
+<section class="banner2_ section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 text=center">
+        {{!-- left side --}}
+        <h3>Methodology</h3>
+        <p>Developing sensitivity towards the environment and its protection and appreciating the cultural, ethnic, and religious diversity that marks our world are some of the major goals and core needs of Education today. Inculcating essential human values and developing core life skills among children right from early classes through a curriculum designed suitably within and across subjects is by far the best methodology schools can adopt to achieve this goal. Although the CISCE has since the last year, reworked its curriculum to mandate this integration and inter-disciplinary approach of subjects to make the learning experience more meaningful, long-lasting and engaging for the child, Billabong’s curriculum has been preparing children in just this manner right from its inception.</p>
+    <button class="btn btn-primary">Click Here</button>
+    </div>
+    <div class="col-md-6 text-center py-3">
+      {{!-- right side --}}
+      <img src="/static/images/banner_1.jpg" style="height: 300px;" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+ {{!-- banner2_section --}}
+
+
+<section class="banner2_ section py-5">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-6 text-center ">
+      {{!-- left side --}}
+      <img src="/static/images/banner_2.png" style="height: 300px;" alt="">
+      </div>
+      <div class="col-md-6 text-center py-5 ">
+        {{!-- right side --}}
+        <h3>Life skills</h3>
+        <p>Life skills is a term used to describe a set of basic skills acquired through learning and/or direct life experience that enable individuals and groups to effectively handle issues and problems commonly encountered in daily life.</p>
+    <button class="btn btn-primary">Click Here</button>
+    </div>
+    
+    </div>
+  </div>
+</section>
+
+
+
+{{!-- about section --}}
+
+
+{{!-- footer --}}
+
+<footer class="footer background2 text-center text-light py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        &copy; 2023 copyright:<span>billabongschool</span>
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
